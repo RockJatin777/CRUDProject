@@ -1,0 +1,51 @@
+.legend {
+    text-align: left;
+    background-color: rgb(155, 190, 221);
+}
+
+.popup-container {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 32px;
+    width: 550px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-heading {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.user-input {
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #838383;
+    border-radius: 6px;
+    padding: 10px;
+    color: #838383;
+}
+
+.btn-container {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.trigger-button {
+    border: none;
+    color: red;
+    margin-right: 10px;
+    background: none;
+}
+
+.create-button {
+    background-color: #7E22CE;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 8px;
+    border: none;
+}
