@@ -1,4 +1,3 @@
-import bcrypt from 'bcryptjs'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
@@ -16,6 +15,8 @@ const RegisterPage = () =>  {
   const [errorMsgForConfirmPassword, setErrorMsgForConfirmPassword] = useState('')
   
   const navigate = useNavigate()
+
+  
 
   const checkNotEmptyConfirmPassword = event => {
     if(event.target.value === ""){
@@ -59,8 +60,8 @@ const RegisterPage = () =>  {
     event.preventDefault()
     if(password === confirmPassword){
       if(username !== "" && password.length > 7){
-        const hashPassword = await bcrypt.hash(password, 10);
-        localStorage.setItem("user", [username, hashPassword])
+  
+        localStorage.setItem("user", [username, password])
         navigate('/');
       } else {
         setShowSubmitErr(true)

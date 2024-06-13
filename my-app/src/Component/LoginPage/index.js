@@ -1,4 +1,3 @@
-import bcrypt from 'bcryptjs'
 import {Link} from 'react-router-dom'
 
 
@@ -24,7 +23,7 @@ const LoginPage = () => {
     }
   }
 
-   const checkNotEmptyPassword = event => {
+  const checkNotEmptyPassword = event => {
     if(event.target.value === ""){
         setErrorMsgForPassword("*required")
     } else {
@@ -46,8 +45,7 @@ const LoginPage = () => {
     event.preventDefault()
     let userDetails = localStorage.getItem('user')
     userDetails = userDetails.split(",")
-    const hashPassword = await bcrypt.compare(password, userDetails[1]);
-    if(username === userDetails[0] && hashPassword === true){
+    if(username === userDetails[0] && password === userDetails[1]){
       navigate('/');
     } else {
       setShowSubmitErr(true)
