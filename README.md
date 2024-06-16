@@ -22,4 +22,6 @@ CRUD Project
       > filtering by category,
       > you can add a new product details,
       > you can edit and delete product details
+
+11. You can visit the app  https://crud-project-oqqp.vercel.app/
  
